@@ -24,6 +24,20 @@ parisTimeElement.innerHTML = parisTime.format(
     "h:mm:ss [<small>]A[</small>]"
 );
 }
+
+// Barcelona
+let barcelonaElement = document.querySelector("#barcelona");
+if (barcelonaElement){
+let barcelonaDateElement = barcelonaElement.querySelector(".date");
+let barcelonaTimeElement = barcelonaElement.querySelector(".time");
+let barcelonaTime = moment().tz("Europe/Madrid");
+
+barcelonaDateElement.innerHTML = moment().format("MMMM Do YYYY");
+barcelonaTimeElement.innerHTML = barcelonaTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+);
+}
+
 }
 
 function updateCity(event){
